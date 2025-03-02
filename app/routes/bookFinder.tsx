@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 interface Book {
@@ -10,39 +11,59 @@ const BookGenreUI = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(false);
 
+  // Derived reactive values (calculated from state/props)
+  const isEmpty = books.length === 0;
+  const pageTitle = `${genre.charAt(0).toUpperCase() + genre.slice(1)} Books`;
+
   // Simulated API function
   const fetchBooksByGenre = async (selectedGenre: string): Promise<Book[]> => {
-    console.log(`Fetching books for genre: ${selectedGenre}`);
-    // This simulates an API call
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const bookDatabase = {
-          romance: [
-            { id: 1, title: "Pride and Prejudice", author: "Jane Austen" },
-            { id: 2, title: "The Notebook", author: "Nicholas Sparks" },
-          ],
-          thriller: [
-            { id: 3, title: "The Silent Patient", author: "Alex Michaelides" },
-            { id: 4, title: "Gone Girl", author: "Gillian Flynn" },
-          ],
-          fantasy: [
-            {
-              id: 5,
-              title: "The Name of the Wind",
-              author: "Patrick Rothfuss",
-            },
-            { id: 6, title: "The Way of Kings", author: "Brandon Sanderson" },
-          ],
-        };
+    try {
+      // Format the genre to match Open Library's subject naming conventions
+      const formattedGenre = selectedGenre.toLowerCase().replace(/\s+/g, "_");
 
-        resolve(
-          bookDatabase[
-            selectedGenre.toLowerCase() as keyof typeof bookDatabase
-          ] || ([] as Book[])
-        );
-      }, 600); // Simulate network delay
-    });
+      // Fetch data from Open Library Subjects API
+      const response = await axios.get(
+        `https://openlibrary.org/subjects/${formattedGenre}.json`
+      );
+
+      // Extract relevant book data
+      const books = response.data.works.slice(0, 3).map((work: any) => ({
+        id: work.cover_edition_key || work.key,
+        title: work.title,
+        author: work.authors.map((author: any) => author.name).join(", "),
+      }));
+
+      return books;
+    } catch (error) {
+      console.error("Error fetching books:", error);
+      return [];
+    }
   };
+
+  useEffect(
+    () => {
+      const controller = new AbortController();
+      const fetchBooksByGenre = async (selectedGenre: string) => {
+        const response = await axios.get(
+          `https://openlibrary.org/subjects/${selectedGenre}.json`,
+          {
+            signal: controller.signal,
+          }
+        );
+
+        setBooks(response.data.works); // This will update the books state with the new data
+      };
+
+      fetchBooksByGenre(genre);
+      // Cleanup: remove subscription
+      return () => {
+        console.log("Unsubscribed from data");
+        controller.abort();
+      };
+    },
+    [genre] //dependencies goes into the dependency array
+  );
+
   // Effect with empty dependency array - runs only once on mount
   useEffect(() => {
     const getBooks = async () => {
@@ -56,8 +77,10 @@ const BookGenreUI = () => {
     getBooks();
   }, []); // Empty dependency array - no synchronization with genre changes
 
+  console.log(isEmpty, pageTitle);
+
   return (
-    <div className=" mt-6 p-6 max-w-md mx-auto my-auto bg-white rounded-lg shadow-md">
+    <div className=" mt-[35%] md:mt-10 p-6 w-[85%] md:w-[46%] lg:max-w-md mx-auto my-auto bg-white rounded-lg shadow-md">
       <h2 className="text-xl font-bold mb-4">
         Book Finder (Broken Synchronization)
       </h2>

@@ -18,6 +18,8 @@ const Timer = () => {
     };
   }, [running]); // 🔥 Runs again when `running` changes
 
+  let genre = "romance";
+
   return (
     <div>
       <p>Count: {count}</p>

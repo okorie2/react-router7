@@ -1,12 +1,12 @@
-import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
-import BookGenreUI from "./bookFinder";
+import BookFinder from "./bookFinder";
 import Navbar from "~/components/topbar";
-import Sidenav from "~/components/sideNav";
+import Sidenav from "~/components/sidenav";
+import type { Route } from "../+types/root";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "Bookfinder App" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
@@ -14,9 +14,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Sidenav onNavigate={() => {}} />
-      <BookGenreUI />;
+      <BookFinder />;
     </>
   );
 }

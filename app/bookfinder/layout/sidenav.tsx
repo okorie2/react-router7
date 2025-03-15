@@ -9,6 +9,8 @@ const Sidenav = ({ onNavigate }: props) => {
 
   return (
     <div className="bg-none md:w-max  w-full lg:w-64 fixed top-[10%] md:left-[4%]  lg:left-10 md:top-[30%] shadow-md">
+      {/* Security Vulnerability: XSS via dangerouslySetInnerHTML */}
+      <div dangerouslySetInnerHTML={{ __html: activeItem }} />
       {/* Navigation Items */}
       <nav className="p-2 flex ">
         <ul className="md:space-y-1 w-full flex md:block justify-center items-center gap-4 ">

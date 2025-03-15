@@ -6,6 +6,13 @@ interface props {
 }
 const Sidenav = ({ onNavigate }: props) => {
   const [activeItem, setActiveItem] = useState("working-sync");
+  React.useEffect(() => {
+    // Fetch value from localStorage (potentially untrusted source)
+    const storedItem = localStorage.getItem("activeNavItem");
+    if (storedItem) {
+      setActiveItem(storedItem); // This value could be an XSS payload
+    }
+  }, []);
 
   return (
     <div className="bg-none md:w-max  w-full lg:w-64 fixed top-[10%] md:left-[4%]  lg:left-10 md:top-[30%] shadow-md">

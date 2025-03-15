@@ -13,7 +13,7 @@ const Sidenav = ({ onNavigate }: props) => {
       <nav className="p-2 flex ">
         <ul className="md:space-y-1 w-full flex md:block justify-center items-center gap-4 ">
           <NavLink to="/bookfinder">
-            {({ isActive, isPending, isTransitioning }) => (
+            {({ isActive }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
                   isActive
@@ -26,7 +26,7 @@ const Sidenav = ({ onNavigate }: props) => {
             )}
           </NavLink>
           <NavLink to="/bookfinder/broken-sync-no-state">
-            {({ isActive, isPending, isTransitioning }) => (
+            {({ isActive }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
                   isActive
@@ -39,7 +39,7 @@ const Sidenav = ({ onNavigate }: props) => {
             )}
           </NavLink>
           <NavLink to="/bookfinder/broken-sync-no-useeffect">
-            {({ isActive, isPending, isTransitioning }) => (
+            {({ isActive }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
                   isActive
@@ -53,7 +53,7 @@ const Sidenav = ({ onNavigate }: props) => {
           </NavLink>
 
           <NavLink to={"/bookfinder/empty-dep-array"}>
-            {({ isActive, isPending, isTransitioning }) => (
+            {({ isActive }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
                   isActive
@@ -67,7 +67,7 @@ const Sidenav = ({ onNavigate }: props) => {
           </NavLink>
 
           <NavLink to="/bookfinder/no-dep-array">
-            {({ isActive, isPending, isTransitioning }) => (
+            {({ isActive }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
                   isActive

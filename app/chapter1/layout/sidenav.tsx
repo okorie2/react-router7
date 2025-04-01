@@ -12,7 +12,7 @@ const Sidenav = ({ onNavigate }: props) => {
       {/* Navigation Items */}
       <nav className="p-2 flex ">
         <ul className="md:space-y-1 w-full flex md:block justify-center items-center gap-4 ">
-          <NavLink to="/bookfinder">
+          <NavLink to="/the-right-way-to-useeffect/synchronised" end>
             {({ isActive, isPending, isTransitioning }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
@@ -25,7 +25,7 @@ const Sidenav = ({ onNavigate }: props) => {
               </li>
             )}
           </NavLink>
-          <NavLink to="/bookfinder/broken-sync-no-state">
+          <NavLink to="/the-right-way-to-useeffect/broken-sync-no-state">
             {({ isActive, isPending, isTransitioning }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
@@ -38,7 +38,7 @@ const Sidenav = ({ onNavigate }: props) => {
               </li>
             )}
           </NavLink>
-          <NavLink to="/bookfinder/broken-sync-no-useeffect">
+          <NavLink to="/the-right-way-to-useeffect/broken-sync-no-useeffect">
             {({ isActive, isPending, isTransitioning }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
@@ -52,7 +52,7 @@ const Sidenav = ({ onNavigate }: props) => {
             )}
           </NavLink>
 
-          <NavLink to={"/bookfinder/empty-dep-array"}>
+          <NavLink to={"/the-right-way-to-useeffect/no-sync"}>
             {({ isActive, isPending, isTransitioning }) => (
               <li
                 className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
@@ -62,20 +62,6 @@ const Sidenav = ({ onNavigate }: props) => {
                 }`}
               >
                 Empy dep Array
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/bookfinder/no-dep-array">
-            {({ isActive, isPending, isTransitioning }) => (
-              <li
-                className={`md:w-full text-center md:text-left md:px-4 md:py-2 rounded-md transition-colors ${
-                  isActive
-                    ? "bg-none md:bg-blue-500 text-white"
-                    : "text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                No dep array
               </li>
             )}
           </NavLink>

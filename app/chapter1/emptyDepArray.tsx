@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Instruction from "./component/instruction";
 
 interface Book {
   id: number;
   title: string;
   author: string;
 }
-const BookFinder = () => {
-  let defaultGenre = "romance";
+const EmptyDepArray = () => {
   const [genre, setGenre] = useState("romance");
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const BookFinder = () => {
   const fetchBooksByGenre = async (): Promise<Book[]> => {
     try {
       // Format the genre to match Open Library's subject naming conventions
-      const formattedGenre = defaultGenre.toLowerCase().replace(/\s+/g, "_");
+      const formattedGenre = genre.toLowerCase().replace(/\s+/g, "_");
 
       // Fetch data from Open Library Subjects API
       const response = await axios.get(
@@ -41,31 +41,6 @@ const BookFinder = () => {
     }
   };
 
-  // const controller = new AbortController();
-  // const fetchBooksByGenre = async () => {
-  //   console.log("recalling?");
-  //   const response = await axios.get(
-  //     `https://openlibrary.org/subjects/${"thriller"}.json`,
-  //     {
-  //       signal: controller.signal,
-  //     }
-  //   );
-
-  //   return response.data.works; // This will update the books state with the new data
-  // };
-  // fetchBooksByGenre();
-  // useEffect(
-  //   () => {
-  //     // Cleanup: remove subscription
-  //     return () => {
-  //       console.log("Unsubscribed from data");
-  //       controller.abort();
-  //     };
-  //   },
-  //   [genre] //dependencies goes into the dependency array
-  // );
-
-  //Effect with empty dependency array - runs only once on mount
   useEffect(() => {
     const getBooks = async () => {
       setLoading(true);
@@ -80,8 +55,22 @@ const BookFinder = () => {
 
   return (
     <div className=" mt-[35%] md:mt-10 p-6 w-[85%] md:w-[46%] lg:max-w-md mx-auto my-auto bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-4">Book Finder </h2>
-
+      <h2 className="text-xl font-bold mb-4">Book Finder (No sync) </h2>
+      <Instruction>
+        Try selecting a different genre option
+        <br />
+        You should notice that the list of books returned are the same
+        everytime. This is because the effect that ought to sync the request to
+        the server with <code className="bg-blue-100 px-1 rounded">
+          genre
+        </code>{" "}
+        state has an empty dependency array.
+        {/* <code className="bg-blue-100 px-1 rounded">useEffect</code> to sync
+        states, the component re-renders unnecessarily, triggering multiple API
+        calls.
+        <br /> <br />
+        You can also monitor this behavior in your console logs. */}
+      </Instruction>
       <div className="mb-4">
         <label
           htmlFor="genre-select"
@@ -91,9 +80,9 @@ const BookFinder = () => {
         </label>
         <select
           id="genre-select"
-          value={defaultGenre}
+          defaultValue={"romance"}
+          value={genre}
           onChange={(e) => {
-            defaultGenre = e.target.value;
             setGenre(e.target.value);
           }}
           className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
@@ -106,8 +95,7 @@ const BookFinder = () => {
 
       <div className="mt-6">
         <h3 className="text-lg font-semibold mb-2">
-          Selected Genre:{" "}
-          {defaultGenre.charAt(0).toUpperCase() + defaultGenre.slice(1)}
+          Selected Genre: {genre.charAt(0).toUpperCase() + genre.slice(1)}
         </h3>
         {/* <h3 className="text-lg font-semibold mb-2">
           Books Still Show Romance Only:
@@ -139,4 +127,4 @@ const BookFinder = () => {
   );
 };
 
-export default BookFinder;
+export default EmptyDepArray;

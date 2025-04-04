@@ -10,9 +10,8 @@ export default function BookFinderLayout() {
   return (
     <>
       <Navbar prevPath={prevPath} nextPath={nextPath} />
-      <aside>
-        <Sidenav onNavigate={() => {}} />
-      </aside>
+
+      <Sidenav />
       <main>
         <Outlet />
       </main>

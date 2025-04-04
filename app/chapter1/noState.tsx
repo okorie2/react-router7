@@ -53,7 +53,7 @@ const NoStateBookFinder = () => {
 
   return (
     <div className=" mt-[35%] md:mt-10 p-6 w-[85%] md:w-[46%] lg:max-w-md mx-auto my-auto bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-4">Book Finder </h2>
+      <h2 className="text-xl font-bold mb-4">Book Finder (Without State) </h2>
 
       {/* Instructions section */}
       <Instruction>

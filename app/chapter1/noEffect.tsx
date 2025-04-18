@@ -10,11 +10,7 @@ interface Book {
 const NoEffectBookFinder = () => {
   const [genre, setGenre] = useState("romance");
   const [musicGenre, setMusicGenre] = useState("rock");
-  const [books, setBooks] = useState<Book[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [displayHelper, setDisplayHelper] = useState(false);
   const [renderCount, setRenderCount] = useState(0);
-
   // This logs how many times the component renders
   useEffect(() => {
     setRenderCount((prev) => prev + 1);
@@ -22,19 +18,11 @@ const NoEffectBookFinder = () => {
 
   // Simulated API function - moved the state updates outside
   const fetchBooksByGenre = async () => {
-    console.log(`fetchBooksByGenre called with book genre: ${genre}`);
-    console.log(`fetchBooksByGenre called with music genre: ${genre}`);
-
     try {
-      // Format the genre to match Open Library's subject naming conventions
       const formattedGenre = genre.toLowerCase().replace(/\s+/g, "_");
-
-      // Fetch data from Open Library Subjects API
       const response = await axios.get(
         `https://openlibrary.org/subjects/${formattedGenre}.json`
       );
-
-      // Extract relevant book data
       const books = response.data.works.slice(0, 3).map((work: any) => ({
         id: work.cover_edition_key || work.key,
         title: work.title,
@@ -78,7 +66,6 @@ const NoEffectBookFinder = () => {
           value={genre}
           onChange={(e) => {
             setGenre(e.target.value);
-            setDisplayHelper(true);
           }}
           className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
@@ -123,20 +110,8 @@ const NoEffectBookFinder = () => {
           fetchBooksByGenre called: {renderCount} time(s)
         </h3>
 
-        {loading ? (
-          <p className="text-gray-500 italic">Loading books...</p>
-        ) : (
-          <ul className="space-y-2">
-            {books.map((book) => (
-              <li key={book.id} className="p-2 bg-gray-50 rounded">
-                <span className="font-medium">{book.title}</span>
-                <span className="block text-sm text-gray-500">
-                  by {book.author}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
+        {/* books component would get called here if there was a book state. 
+        No book state cos we can't set the state directly in the component in order to prevent infinite re-renders */}
       </div>
 
       <div className={`mt-4 p-3 bg-red-50 rounded-md `}>

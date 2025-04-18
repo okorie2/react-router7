@@ -32,7 +32,6 @@ export const useCustomNavigation = () => {
   Object.entries(navigationConfig).forEach(([key, config]) => {
     if (key !== "home" && location.pathname === config.path) {
       currentPageKey = key;
-      console.log(key, "currentPageKey");
     }
   });
 

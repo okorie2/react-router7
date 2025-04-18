@@ -122,6 +122,23 @@ const Sidenav = () => {
                   </li>
                 )}
               </NavLink>
+
+              <NavLink
+                to="/the-right-way-to-useeffect/counter"
+                onClick={handleNavigate}
+              >
+                {({ isActive }) => (
+                  <li
+                    className={`px-4 py-2 rounded-md transition-all duration-200 ${
+                      isActive
+                        ? "bg-indigo-800 text-white"
+                        : "text-gray-300 hover:bg-gray-800"
+                    }`}
+                  >
+                    Counter
+                  </li>
+                )}
+              </NavLink>
             </ul>
           </nav>
         </div>

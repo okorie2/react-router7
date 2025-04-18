@@ -12,28 +12,17 @@ const BookFinder = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Derived reactive values (calculated from state/props)
-  const isEmpty = books.length === 0;
-  const pageTitle = `${genre.charAt(0).toUpperCase() + genre.slice(1)} Books`;
-
-  // Simulated API function
   const fetchBooksByGenre = async (): Promise<Book[]> => {
     try {
-      // Format the genre to match Open Library's subject naming conventions
       const formattedGenre = genre.toLowerCase().replace(/\s+/g, "_");
-
-      // Fetch data from Open Library Subjects API
       const response = await axios.get(
         `https://openlibrary.org/subjects/${formattedGenre}.json`
       );
-
-      // Extract relevant book data
       const books = response.data.works.slice(0, 3).map((work: any) => ({
         id: work.cover_edition_key || work.key,
         title: work.title,
         author: work.authors.map((author: any) => author.name).join(", "),
       }));
-
       return books;
     } catch (error) {
       console.error("Error fetching books:", error);
@@ -87,10 +76,6 @@ const BookFinder = () => {
         <h3 className="text-lg font-semibold mb-2">
           Selected Genre: {genre.charAt(0).toUpperCase() + genre.slice(1)}
         </h3>
-        {/* <h3 className="text-lg font-semibold mb-2">
-          Books Still Show Romance Only:
-        </h3> */}
-
         {loading ? (
           <p className="text-gray-500 italic">Loading books...</p>
         ) : (
@@ -106,13 +91,6 @@ const BookFinder = () => {
           </ul>
         )}
       </div>
-
-      {/* <div className="mt-4 p-3 bg-red-50 rounded-md">
-        <p className="text-sm text-red-700">
-          <strong>Problem:</strong> The genre dropdown changes, but the book
-          list doesn't update!
-        </p>
-      </div> */}
     </div>
   );
 };

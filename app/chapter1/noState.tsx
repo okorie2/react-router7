@@ -16,10 +16,7 @@ const NoStateBookFinder = () => {
   // Simulated API function
   const fetchBooksByGenre = async (): Promise<Book[]> => {
     try {
-      // Format the genre to match Open Library's subject naming conventions
       const formattedGenre = genre.toLowerCase().replace(/\s+/g, "_");
-
-      // Fetch data from Open Library Subjects API
       const response = await axios.get(
         `https://openlibrary.org/subjects/${formattedGenre}.json`
       );

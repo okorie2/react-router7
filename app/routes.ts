@@ -15,12 +15,9 @@ export default [
       route("broken-sync-no-state", "./chapter1/noState.tsx"),
       route("broken-sync-no-useeffect", "./chapter1/noEffect.tsx"),
       route("no-sync", "./chapter1/emptyDepArray.tsx"),
+      route("counter", "./chapter1/counter.tsx"),
     ]),
   ]),
-  ...prefix("react-server-components", [
-    index("chapter2/index.tsx"),
-  ]),
-  ...prefix("react-design-patterns", [
-    index("chapter3/index.tsx"),
-  ]),
+  ...prefix("react-server-components", [index("chapter2/index.tsx")]),
+  ...prefix("react-design-patterns", [index("chapter3/index.tsx")]),
 ] satisfies RouteConfig;

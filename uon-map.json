@@ -1,0 +1,710 @@
+{
+  "Senate_F0": {
+    "leftEntrance": [
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "catering",
+        "weight": 1
+      },
+      {
+        "to": "lift_F0_West",
+        "weight": 1
+      },
+      {
+        "to": "lift_F0_North",
+        "weight": 1
+      },
+      {
+        "to": "SN001",
+        "weight": 2
+      },
+      {
+        "to": "SN003",
+        "weight": 2
+      },
+      {
+        "to": "SN002",
+        "weight": 1
+      },
+
+      {
+        "to": "Reception",
+        "weight": 2
+      },
+      {
+        "to": "rightEntrance",
+        "weight": 2
+      }
+    ],
+    "rightEntrance": [
+      {
+        "to": "Reception",
+        "weight": 1
+      }
+    ],
+    "Reception": [
+      {
+        "to": "lift_F0_North",
+        "weight": 2
+      },
+      {
+        "to": "lift_F0_West",
+        "weight": 2
+      },
+      {
+        "to": "toilets",
+        "weight": 2
+      },
+
+      {
+        "to": "SN001",
+        "weight": 1
+      },
+      {
+        "to": "SN002",
+        "weight": 1
+      },
+      {
+        "to": "SN003",
+        "weight": 1
+      }
+    ],
+
+    "lift_F0": [
+      {
+        "to": "balcony_F1",
+        "weight": 1
+      }
+    ]
+  },
+  "senate_F1": {
+    "lift_F1_West": [
+      {
+        "to": "seating_F1_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F1_west",
+        "weight": 1
+      },
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "SN110",
+        "weight": 1
+      },
+      {
+        "to": "SN109",
+        "weight": 1
+      },
+      {
+        "to": "SN108",
+        "weight": 1
+      },
+      {
+        "to": "SN107",
+        "weight": 1
+      },
+      {
+        "to": "SN106",
+        "weight": 2
+      },
+      {
+        "to": "SN105",
+        "weight": 2
+      },
+      {
+        "to": "SN104",
+        "weight": 2
+      },
+      {
+        "to": "SN103",
+        "weight": 2
+      },
+      {
+        "to": "SN101 (Morley room)",
+        "weight": 1
+      },
+      {
+        "to": "balcony_F1",
+        "weight": 1
+      }
+    ],
+    "lift_F1_North": [
+      {
+        "to": "balcony_F1",
+        "weight": 1
+      }
+    ],
+
+    "balcony_F1": [
+      {
+        "to": "seating_F1_west",
+        "weight": 1
+      },
+      {
+        "to": "seating_F1_east",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F1_east",
+        "weight": 1
+      },
+
+      {
+        "to": "staircase_F1_east",
+        "weight": 1
+      },
+      {
+        "to": "lift_F1_North",
+        "weight": 1
+      }
+    ],
+
+    "seating_F1_east": [
+      {
+        "to": "toilets",
+        "weight": 2
+      },
+
+      {
+        "to": "SN103",
+        "weight": 1
+      },
+      {
+        "to": "SN104",
+        "weight": 1
+      },
+      {
+        "to": "SN105",
+        "weight": 1
+      },
+      {
+        "to": "SN106",
+        "weight": 1
+      },
+      {
+        "to": "SN107",
+        "weight": 2
+      },
+      {
+        "to": "SN108",
+        "weight": 2
+      },
+      {
+        "to": "SN109",
+        "weight": 2
+      },
+      {
+        "to": "SN110",
+        "weight": 2
+      }
+    ],
+    "seating_F1_west": [
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "SN101 (Morley room)",
+        "weight": 1
+      },
+      {
+        "to": "SN102",
+        "weight": 1
+      },
+
+      {
+        "to": "SN107",
+        "weight": 1
+      },
+      {
+        "to": "SN108",
+        "weight": 1
+      },
+      {
+        "to": "SN109",
+        "weight": 1
+      },
+      {
+        "to": "SN110",
+        "weight": 1
+      },
+      {
+        "to": "SN103",
+        "weight": 2
+      },
+      {
+        "to": "SN104",
+        "weight": 2
+      },
+      {
+        "to": "SN105",
+        "weight": 2
+      },
+      {
+        "to": "SN106",
+        "weight": 2
+      }
+    ]
+  },
+
+  "senate_F2": {
+    "lift_F2_West": [
+      {
+        "to": "seating_F2_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F2_west",
+        "weight": 1
+      }
+    ],
+    "lift_F2_North": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      }
+    ],
+    "staircase_F2_east": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      },
+      {
+        "to": "seating_F2_east",
+        "weight": 1
+      }
+    ],
+    "staircase_F2_west": [
+      {
+        "to": "lift_F2_West",
+        "weight": 1
+      },
+      {
+        "to": "seating_F2_west",
+        "weight": 1
+      },
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      }
+    ],
+    "balcony_F2": [
+      {
+        "to": "seating_F2_east",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F2_east",
+        "weight": 1
+      },
+      {
+        "to": "seating_F2_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F2_west",
+        "weight": 1
+      },
+      {
+        "to": "lift_F2_North",
+        "weight": 1
+      }
+    ],
+
+    "seating_F2_east": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      },
+
+      {
+        "to": "SN205",
+        "weight": 1
+      },
+      {
+        "to": "SN206",
+        "weight": 1
+      },
+      {
+        "to": "SN207",
+        "weight": 1
+      },
+      {
+        "to": "SN208",
+        "weight": 1
+      },
+      {
+        "to": "SN209",
+        "weight": 1
+      },
+      {
+        "to": "SN210",
+        "weight": 1
+      },
+      {
+        "to": "SN211",
+        "weight": 1
+      },
+      {
+        "to": "SN212",
+        "weight": 2
+      },
+      {
+        "to": "SN213",
+        "weight": 2
+      },
+      {
+        "to": "SN214",
+        "weight": 2
+      },
+      {
+        "to": "SN215",
+        "weight": 2
+      },
+      {
+        "to": "toilets",
+        "weight": 2
+      }
+    ],
+    "seating_F2_west": [
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "lift_F2_West",
+        "weight": 1
+      },
+      {
+        "to": "SN201",
+        "weight": 1
+      },
+      {
+        "to": "SN202",
+        "weight": 1
+      },
+      {
+        "to": "SN203",
+        "weight": 1
+      },
+      {
+        "to": "SN204",
+        "weight": 1
+      },
+      {
+        "to": "SN215",
+        "weight": 1
+      },
+      {
+        "to": "SN214",
+        "weight": 1
+      },
+      {
+        "to": "SN213",
+        "weight": 1
+      },
+      {
+        "to": "SN212",
+        "weight": 1
+      },
+      {
+        "to": "SN211",
+        "weight": 2
+      },
+      {
+        "to": "SN210",
+        "weight": 2
+      },
+      {
+        "to": "SN209",
+        "weight": 2
+      },
+      {
+        "to": "SN208",
+        "weight": 2
+      }
+    ],
+
+    "SN201": [
+      {
+        "to": "Terrace",
+        "weight": 1
+      }
+    ],
+    "SN202": [
+      {
+        "to": "Terrace",
+        "weight": 1
+      }
+    ],
+    "SN208": [
+      {
+        "to": "SN209",
+        "weight": 1
+      }
+    ],
+    "SN209": [
+      {
+        "to": "SN208",
+        "weight": 1
+      }
+    ]
+  },
+  "senate_F3": {
+    "lift_F3_West": [
+      {
+        "to": "seating_F3_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F3_west",
+        "weight": 1
+      },
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "SN315",
+        "weight": 1
+      },
+      {
+        "to": "SN314",
+        "weight": 1
+      },
+      {
+        "to": "SN313",
+        "weight": 1
+      },
+      {
+        "to": "SN312",
+        "weight": 1
+      },
+      {
+        "to": "SN311",
+        "weight": 2
+      },
+      {
+        "to": "SN310",
+        "weight": 2
+      },
+      {
+        "to": "SN309",
+        "weight": 2
+      },
+      {
+        "to": "SN308",
+        "weight": 2
+      }
+    ],
+    "lift_F3_North": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      }
+    ],
+    "staircase_F3_east": [
+      {
+        "to": "balcony_F3",
+        "weight": 1
+      },
+      {
+        "to": "seating_F3_east",
+        "weight": 1
+      }
+    ],
+    "staircase_F2_west": [
+      {
+        "to": "lift_F3_West",
+        "weight": 1
+      },
+      {
+        "to": "seating_F3_west",
+        "weight": 1
+      },
+      {
+        "to": "balcony_F3",
+        "weight": 1
+      }
+    ],
+    "balcony_F3": [
+      {
+        "to": "seating_F3_east",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F3_east",
+        "weight": 1
+      },
+      {
+        "to": "seating_F3_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F3_west",
+        "weight": 1
+      },
+      {
+        "to": "lift_F3_North",
+        "weight": 1
+      }
+    ],
+    "seating_F2_east": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      },
+
+      {
+        "to": "SN305",
+        "weight": 1
+      },
+      {
+        "to": "SN306",
+        "weight": 1
+      },
+      {
+        "to": "SN307",
+        "weight": 1
+      },
+      {
+        "to": "SN308",
+        "weight": 1
+      },
+      {
+        "to": "SN309",
+        "weight": 1
+      },
+      {
+        "to": "SN310",
+        "weight": 1
+      },
+      {
+        "to": "SN311",
+        "weight": 1
+      },
+      {
+        "to": "SN312",
+        "weight": 2
+      },
+      {
+        "to": "SN313",
+        "weight": 2
+      },
+      {
+        "to": "SN314",
+        "weight": 2
+      },
+      {
+        "to": "SN315",
+        "weight": 2
+      },
+      {
+        "to": "toilets",
+        "weight": 2
+      }
+    ],
+    "seating_F3_west": [
+      {
+        "to": "toilets",
+        "weight": 1
+      },
+      {
+        "to": "lift_F3_West",
+        "weight": 1
+      },
+      {
+        "to": "SN301",
+        "weight": 1
+      },
+      {
+        "to": "SN302",
+        "weight": 1
+      },
+      {
+        "to": "SN303",
+        "weight": 1
+      },
+      {
+        "to": "SN304",
+        "weight": 1
+      },
+      {
+        "to": "SN315",
+        "weight": 1
+      },
+      {
+        "to": "SN314",
+        "weight": 1
+      },
+      {
+        "to": "SN313",
+        "weight": 1
+      },
+      {
+        "to": "SN312",
+        "weight": 1
+      },
+      {
+        "to": "SN311",
+        "weight": 2
+      },
+      {
+        "to": "SN310",
+        "weight": 2
+      },
+      {
+        "to": "SN309",
+        "weight": 2
+      },
+      {
+        "to": "SN308",
+        "weight": 2
+      }
+    ],
+    "SN308": [
+      {
+        "to": "S3209",
+        "weight": 1
+      }
+    ],
+    "SN309": [
+      {
+        "to": "SN308",
+        "weight": 1
+      }
+    ]
+  },
+  "senate_F4":{
+       "lift_F4_West": [
+      {
+        "to": "seating_F4_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F4_west",
+        "weight": 1
+      },
+          {
+        "to": "SN402",
+        "weight": 1
+      }
+    ],
+    "lift_F2_North": [
+      {
+        "to": "balcony_F2",
+        "weight": 1
+      }
+    ]
+  },
+  "creative_hub_F1":{
+
+  }
+}

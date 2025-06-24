@@ -15,6 +15,18 @@
         {
             "to": "GreenvilleRoom",
             "weight": 1
+        },
+        {
+            "to": "3",
+            "weight": 1
+        },
+        {
+            "to": "VisitorAndMemberCloadkRoom",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
         }
     ],
     "ForeCourtCafe": [
@@ -32,6 +44,66 @@
             "to": "12",
             "weight": 1
         }
+    ],
+    "GreenvilleRoom": [
+        {
+            "to": "SouthStairs",
+            "weight": 1
+        },
+        {
+            "to": "MainEntrance",
+            "weight": 1
+        },
+        {
+            "to": "GreatCourt",
+            "weight": 1
+        },
+        {
+            "to": "2",
+            "weight": 1
+        },
+        {
+            "to": "3",
+            "weight": 1
+        },
+        {
+            "to": "VisitorAndMemberCloadkRoom",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        }
+    ],
+    "SouthStairs": [
+        {
+            "to": "GreenvilleRoom",
+            "weight": 1
+        },
+        {
+            "to": "MainEntrance",
+            "weight": 1
+        },
+        {
+            "to": "GreatCourt",
+            "weight": 1
+        },
+        {
+            "to": "3",
+            "weight": 1
+        },
+        {
+            "to": "VisitorAndMemberCloadkRoom",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        },
+        // {
+        //     "to": "36",
+        //     "weight": 1
+        // }
     ],
     "GreatCourt": [
         {
@@ -63,7 +135,19 @@
             "weight": 1
         },
         {
-            "to": "Stairs-CloreCentre",
+            "to": "Shop",
+            "weight": 1
+        },
+        {
+            "to": "CloreCentre",
+            "weight": 1
+        },
+        {
+            "to": "MainEntrance",
+            "weight": 1
+        },
+        {
+            "to": "3",
             "weight": 1
         }
     ],
@@ -86,6 +170,10 @@
         },
         {
             "to": "BabyChanging",
+            "weight": 1
+        },
+        {
+            "to": "33b",
             "weight": 1
         }
     ],
@@ -113,7 +201,7 @@
             "weight": 1
         },
         {
-            "to": "MontaguePalaceEntrance",
+            "to": "MontaguePlaceEntrance",
             "weight": 1
         },
         {
@@ -163,10 +251,6 @@
         {
             "to": "95",
             "weight": 1
-        },
-        {
-            "to": "67",
-            "weight": 1
         }
     ],
     "1": [
@@ -175,7 +259,7 @@
             "weight": 1
         },
         {
-            "to": "BookShop",
+            "to": "GreatCourt",
             "weight": 1
         },
         {
@@ -205,7 +289,32 @@
         {
             "to": "Shop",
             "weight": 1
+        },
+        {
+            "to": "MainEntrance",
+            "weight": 1
+        },
+        {
+            "to": "VisitorAndMemberCloadkRoom",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        },
+        {
+            "to": "GreenvilleRoom",
+            "weight": 1
+        },
+        {
+            "to": "SouthStairs",
+            "weight": 1
+        },
+        {
+            "to": "GreatCourt",
+            "weight": 1
         }
+       
     ],
     "4": [
         {
@@ -217,15 +326,11 @@
             "weight": 1
         },
         {
-            "to": "WestStairs-L0",
+            "to": "WestStairs_G_L0",
             "weight": 1
         },
         {
-            "to": "Lift_G_L-0",
-            "weight": 1
-        },
-        {
-            "to": "CollectionsShop",
+            "to": "29a",
             "weight": 1
         }
     ],
@@ -243,7 +348,7 @@
             "weight": 1
         },
         {
-            "to": "VisitorAndMemberCloadkRoom-L0",
+            "to": "VisitorAndMemberCloadkRoom",
             "weight": 1
         }
     ],
@@ -419,8 +524,20 @@
             "weight": 1
         },
         {
-            "to": "WestStairs-G-L0",
+            "to": "20",
             "weight": 1
+        },
+        {
+            "to": "WestStairs_G_L0",
+            "weight": 1
+        },
+        {
+            "to": "29a",
+            "weight": 1 
+        },
+        {
+            "to": "4",
+            "weight": 1 
         }
     ],
     "22": [
@@ -429,13 +546,13 @@
             "weight": 1
         },
         {
-            "to": "stairs-23",
+            "to": "23",
             "weight": 1
         }
     ],
     "23": [
         {
-            "to": "stairs-22",
+            "to": "22",
             "weight": 1
         },
         {
@@ -465,18 +582,69 @@
             "weight": 1
         },
         {
-            "to": "NorthStairs-L-1&0",
+            "to": "NorthStairs_L-1&0",
             "weight": 1
         },
+
         {
-            "to": "Lift_G_L-1&0",
-            "weight": 1
-        },
-        {
-            "to": "stairs-25",
+            "to": "25",
             "weight": 1
         }
     ],
+
+    // "25": [
+    //     {
+    //         "to": "Lift_L_L-2",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "24",
+    //         "weight": 1
+    //     }
+ 
+ 
+    // ],
+    // "Lift_L": [
+    //     {
+    //         "to": "CloreCentre",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "25",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "FordCentre",
+    //         "weight": 1
+    //     }
+ 
+    // ],
+    // "FordCentre": [
+    //     {
+    //         "to": "BabyFeeding",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "Accessible Toilets",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "Toilets",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "BabyChanging",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "Lift_L",
+    //         "weight": 1
+    //     }
+    
+
+ 
+    // ],
+
     "26": [
         {
             "to": "24",
@@ -505,6 +673,18 @@
         {
             "to": "GreatCourt",
             "weight": 1
+        },
+        {
+            "to": "29b",
+            "weight": 1 
+        },
+        {
+            "to": "21",
+            "weight": 1 
+        },
+        {
+            "to": "4",
+            "weight": 1 
         }
     ],
     "29b": [
@@ -521,11 +701,23 @@
             "weight": 1
         },
         {
+            "to": "30",
+            "weight": 1
+        },
+        {
             "to": "Accessible Toilets",
             "weight": 1
         }
     ],
     "30": [
+        {
+            "to": "WestStairs",
+            "weight": 1
+        },
+        {
+            "to": "29b",
+            "weight": 1
+        },
         {
             "to": "Shop",
             "weight": 1
@@ -547,34 +739,81 @@
     ],
     "33": [
         {
-            "to": "stairs-33b",
+            "to": "33b",
             "weight": 1
         },
         {
-            "to": "NorthStairs-G-L1",
+            "to": "33a",
+            "weight": 1
+        },
+        {
+            "to": "NorthStairs_G_L1",
             "weight": 1
         }
     ],
     "33b": [
         {
-            "to": "stairs-33",
+            "to": "33",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        },
+        {
+            "to": "EastStairs",
             "weight": 1
         }
     ],
     "95": [
         {
-            "to": "NorthStairs-G-L2",
+            "to": "NorthStairs_G_L2",
             "weight": 1
         },
         {
             "to": "Lift_G_L2",
             "weight": 1
+        },
+        {
+            "to": "67",
+            "weight": 1
         }
     ],
+    // "36": [
+    //     {
+    //         "to": "CoffeLounge",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "37",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "SouthStairs",
+    //         "weight": 1
+    //     },
+    //     {
+    //         "to": "40",
+    //         "weight": 1
+    //     }
+    // ],
     "67": [
         {
-            "to": "NorthStairs-G-L2",
+            "to": "NorthStairs_G_L2",
+            "weight": 1
+        },
+        {
+            "to": "95",
             "weight": 1
         }
     ]
+
 }

@@ -100,10 +100,10 @@
             "to": "Shop",
             "weight": 1
         },
-        // {
-        //     "to": "36",
-        //     "weight": 1
-        // }
+        {
+            "to": "36",
+            "weight": 1
+        }
     ],
     "GreatCourt": [
         {
@@ -174,6 +174,10 @@
         },
         {
             "to": "33b",
+            "weight": 1
+        },
+        {
+            "to": "53",
             "weight": 1
         }
     ],
@@ -314,7 +318,6 @@
             "to": "GreatCourt",
             "weight": 1
         }
-       
     ],
     "4": [
         {
@@ -533,11 +536,11 @@
         },
         {
             "to": "29a",
-            "weight": 1 
+            "weight": 1
         },
         {
             "to": "4",
-            "weight": 1 
+            "weight": 1
         }
     ],
     "22": [
@@ -582,69 +585,97 @@
             "weight": 1
         },
         {
-            "to": "NorthStairs_L-1&0",
+            "to": "NorthStairs_G_L-1&0",
             "weight": 1
         },
-
         {
             "to": "25",
             "weight": 1
         }
     ],
+    "25": [
+        {
+            "to": "Lift_L_L-2",
+            "weight": 1
+        },
+        {
+            "to": "24",
+            "weight": 1
+        }
+    ],
+    "Lift_L": [
+        {
+            "to": "CloreCentre",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        
+        {
+            "to": "25",
+            "weight": 1
+        },
+        {
+            "to": "FordCentre",
+            "weight": 1
+        }
+    ],
 
-    // "25": [
-    //     {
-    //         "to": "Lift_L_L-2",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "24",
-    //         "weight": 1
-    //     }
- 
- 
-    // ],
-    // "Lift_L": [
-    //     {
-    //         "to": "CloreCentre",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "25",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "FordCentre",
-    //         "weight": 1
-    //     }
- 
-    // ],
-    // "FordCentre": [
-    //     {
-    //         "to": "BabyFeeding",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "Accessible Toilets",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "Toilets",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "BabyChanging",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "Lift_L",
-    //         "weight": 1
-    //     }
-    
+    "CloreCentre": [
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "GreatCourt",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "FordCentre",
+            "weight": 1
+        },
+        {
+            "to": "Lift_L",
+            "weight": 1
+        }
 
- 
-    // ],
-
+    ],
+    "FordCentre": [
+        {
+            "to": "CloreCentre",
+            "weight": 1
+        },
+        {
+            "to": "BabyFeeding",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        },
+        {
+            "to": "Lift_L",
+            "weight": 1
+        }
+    ],
     "26": [
         {
             "to": "24",
@@ -676,15 +707,15 @@
         },
         {
             "to": "29b",
-            "weight": 1 
+            "weight": 1
         },
         {
             "to": "21",
-            "weight": 1 
+            "weight": 1
         },
         {
             "to": "4",
-            "weight": 1 
+            "weight": 1
         }
     ],
     "29b": [
@@ -787,24 +818,615 @@
             "weight": 1
         }
     ],
-    // "36": [
-    //     {
-    //         "to": "CoffeLounge",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "37",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "SouthStairs",
-    //         "weight": 1
-    //     },
-    //     {
-    //         "to": "40",
-    //         "weight": 1
-    //     }
-    // ],
+    "36": [
+        {
+            "to": "CoffeLounge",
+            "weight": 1
+        },
+        {
+            "to": "37",
+            "weight": 1
+        },
+        {
+            "to": "SouthStairs",
+            "weight": 1
+        },
+        {
+            "to": "40",
+            "weight": 1
+        }
+    ],
+    "37": [
+        {
+            "to": "36",
+            "weight": 1
+        },
+        {
+            "to": "38",
+            "weight": 1
+        },
+        {
+            "to": "68",
+            "weight": 1
+        }
+    ],
+    "38": [
+        {
+            "to": "37",
+            "weight": 1
+        },
+        {
+            "to": "39",
+            "weight": 1
+        }
+    ],
+    "39": [
+        {
+            "to": "38",
+            "weight": 1
+        },
+        {
+            "to": "40",
+            "weight": 1
+        }
+    ],
+    "40": [
+        {
+            "to": "36",
+            "weight": 1
+        },
+        {
+            "to": "39",
+            "weight": 1
+        },
+        {
+            "to": "41",
+            "weight": 1
+        }
+    ],
+    "41": [
+        {
+            "to": "47",
+            "weight": 1
+        },
+        {
+            "to": "49",
+            "weight": 1
+        },
+        {
+            "to": "40",
+            "weight": 1
+        },
+        {
+            "to": "42",
+            "weight": 1
+        }
+    ],
+    "42": [
+        {
+            "to": "41",
+            "weight": 1
+        },
+        {
+            "to": "43a",
+            "weight": 1
+        },
+        {
+            "to": "43",
+            "weight": 1
+        }
+    ],
+    "43": [
+        {
+            "to": "42",
+            "weight": 1
+        },
+        {
+            "to": "43a",
+            "weight": 1
+        },
+        {
+            "to": "46",
+            "weight": 1
+        }
+    ],
+    "43a": [
+        {
+            "to": "42",
+            "weight": 1
+        },
+        {
+            "to": "43",
+            "weight": 1
+        }
+    ],
+    "46": [
+        {
+            "to": "43",
+            "weight": 1
+        },
+        {
+            "to": "47",
+            "weight": 1
+        }
+    ],
+    "47": [
+        {
+            "to": "46",
+            "weight": 1
+        },
+        {
+            "to": "48",
+            "weight": 1
+        },
+        {
+            "to": "41",
+            "weight": 1
+        }
+    ],
+    "48": [
+        {
+            "to": "47",
+            "weight": 1
+        }
+    ],
+    "49": [
+        {
+            "to": "41",
+            "weight": 1
+        },
+        {
+            "to": "50",
+            "weight": 1
+        }
+    ],
+    "50": [
+        {
+            "to": "51",
+            "weight": 1
+        },
+        {
+            "to": "49",
+            "weight": 1
+        }
+    ],
+    "51": [
+        {
+            "to": "52",
+            "weight": 1
+        },
+        {
+            "to": "50",
+            "weight": 1
+        }
+    ],
+    "52": [
+        {
+            "to": "51",
+            "weight": 1
+        },
+        {
+            "to": "53",
+            "weight": 1
+        }
+    ],
+    "53": [
+        {
+            "to": "52",
+            "weight": 1
+        },
+        {
+            "to": "EastStairs",
+            "weight": 1
+        },
+        {
+            "to": "54",
+            "weight": 1
+        },
+        {
+            "to": "65",
+            "weight": 1
+        }
+    ],
+    "54": [
+        {
+            "to": "53",
+            "weight": 1
+        },
+        {
+            "to": "55",
+            "weight": 1
+        }
+    ],
+    "55": [
+        {
+            "to": "54",
+            "weight": 1
+        },
+        {
+            "to": "56",
+            "weight": 1
+        }
+    ],
+    "56": [
+        {
+            "to": "55",
+            "weight": 1
+        },
+        {
+            "to": "57",
+            "weight": 1
+        },
+        {
+            "to": "63",
+            "weight": 1
+        },
+        {
+            "to": "GreatCourtRestaurtant", 
+            "weight": 1
+        }
+    ],
+
+    "GreatCourtRestaurtant": [
+        {
+            "to": "56",
+            "weight": 1
+        },
+        {
+            "to": "35",
+            "weight": 1
+        }
+    ],
+
+    "35": [
+        {
+            "to": "GreatCourtRestaurtant",
+            "weight": 1
+        }
+  
+    ],
+
+    "57": [
+        {
+            "to": "56",
+            "weight": 1
+        },
+        {
+            "to": "58",
+            "weight": 1
+        }
+    ],
+    "58": [
+        {
+            "to": "MembersRoom",
+            "weight": 1
+        },
+        {
+            "to": "57",
+            "weight": 1
+        },
+        {
+            "to": "59",
+            "weight": 1
+        }
+    ],
+    "MembersRoom": [
+     
+        {
+            "to": "WestStairs",
+            "weight": 1
+        }
+ 
+    ],
+
+    "59": [
+   
+        {
+            "to": "58",
+            "weight": 1
+        },
+        {
+            "to": "61",
+            "weight": 1
+        },
+        {
+            "to": "73",
+            "weight": 1
+        },
+        {
+            "to": "WestStairs",
+            "weight": 1
+        }
+    ],
+
+    "61": [
+        {
+            "to": "59",
+            "weight": 1
+        },
+        {
+            "to": "62",
+            "weight": 1
+        }
+    ],
+    "62": [
+        {
+            "to": "61",
+            "weight": 1
+        },
+        {
+            "to": "63",
+            "weight": 1
+        }
+    ],
+
+    "63": [
+        {
+            "to": "62",
+            "weight": 1
+        },
+        {
+            "to": "64",
+            "weight": 1
+        },
+        {
+            "to": "56",
+            "weight": 1
+        },
+        {
+            "to": "66",
+            "weight": 1
+        }
+    ],
+
+    "64": [
+        {
+            "to": "63",
+            "weight": 1
+        },
+        {
+            "to": "65",
+            "weight": 1
+        }
+    ],
+    "65": [
+        {
+            "to": "64",
+            "weight": 1
+        },
+        {
+            "to": "53",
+            "weight": 1
+        }
+    ],
+
+    "66": [
+        {
+            "to": "63",
+            "weight": 1
+        },
+        {
+            "to": "NorthStairs_U_L3&4",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        },
+        {
+            "to": "90",
+            "weight": 1
+        },
+        {
+            "to": "90a",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        }
+    ],
+
+    "NorthStairs_U_L3&4": [
+        {
+            "to": "66",
+            "weight": 1
+        },
+        {
+            "to": "90",
+            "weight": 1
+        },
+        {
+            "to": "90a",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        }
+    ],
+    "90": [
+        {
+            "to": "NorthStairs_U_L3&4",
+            "weight": 1
+        },
+        {
+            "to": "66",
+            "weight": 1
+        },
+        {
+            "to": "90a",
+            "weight": 1
+        },
+         {
+            "to": "94",
+            "weight": 1
+        },
+        {
+            "to": "Shop",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        }
+    ],
+    "90a": [
+        {
+            "to": "NorthStairs_U_L3&4",
+            "weight": 1
+        },
+        {
+            "to": "66",
+            "weight": 1
+        },
+        {
+            "to": "90",
+            "weight": 1
+        },
+    
+        {
+            "to": "Shop",
+            "weight": 1
+        },
+        {
+            "to": "Toilets",
+            "weight": 1
+        },
+        {
+            "to": "Accessible Toilets",
+            "weight": 1
+        },
+        {
+            "to": "BabyChanging",
+            "weight": 1
+        }
+    ],
+    "94": [
+        {
+            "to": "90",
+            "weight": 1
+        },
+        {
+            "to": "93",
+            "weight": 1
+        }
+    ],
+    "93": [
+        {
+            "to": "94",
+            "weight": 1
+        },
+        {
+            "to": "92",
+            "weight": 1
+        }
+    ],
+    
+    "92": [
+        {
+            "to": "93",
+            "weight": 1
+        },
+    
+        {
+            "to": "NorthStairs_U_L5",
+            "weight": 1
+        }
+    ],
+
+    "73": [
+        {
+            "to": "59",
+            "weight": 1
+        },
+        {
+            "to": "72",
+            "weight": 1
+        }
+    ],
+    "72": [
+        {
+            "to": "73",
+            "weight": 1
+        },
+        {
+            "to": "71",
+            "weight": 1
+        }
+    ],
+
+    "71": [
+        {
+            "to": "72",
+            "weight": 1
+        },
+        {
+            "to": "70",
+            "weight": 1
+        }
+    ],
+
+    "70": [
+        {
+            "to": "71",
+            "weight": 1
+        },
+        {
+            "to": "69",
+            "weight": 1
+        }
+    ],
+    "69": [
+        {
+            "to": "68",
+            "weight": 1
+        },
+        {
+            "to": "70",
+            "weight": 1
+        }
+    ],
+    "68": [
+        {
+            "to": "37",
+            "weight": 1
+        },
+        {
+            "to": "69",
+            "weight": 1
+        }
+    ],
+
+
     "67": [
         {
             "to": "NorthStairs_G_L2",
@@ -815,5 +1437,4 @@
             "weight": 1
         }
     ]
-
 }

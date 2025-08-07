@@ -1,51 +1,95 @@
 {
   "Senate_F0": {
-    "leftEntrance": [
+    "NorthEntrance": [
       {
         "to": "toilets",
         "weight": 1
       },
       {
-        "to": "catering",
+        "to": "cafeBar",
         "weight": 1
       },
       {
-        "to": "lift_F0_West",
+        "to": "cafeBar",
+        "weight": 1
+      },
+
+      {
+        "to": "catering",
         "weight": 1
       },
       {
         "to": "lift_F0_North",
         "weight": 1
       },
+
       {
-        "to": "SN001",
+        "to": "SN002",
+        "weight": 1
+      },
+      {
+        "to": "Research & Enterprise",
+        "weight": 2
+      },
+      {
+        "to": "SN001(Bloomberg Finance Lab)",
         "weight": 2
       },
       {
         "to": "SN003",
         "weight": 2
       },
-      {
-        "to": "SN002",
-        "weight": 1
-      },
 
       {
         "to": "Reception",
         "weight": 2
       },
       {
-        "to": "rightEntrance",
+        "to": "southEnthrance",
         "weight": 2
       }
     ],
-    "rightEntrance": [
+    "staircase_F0_east_path": [
       {
-        "to": "Reception",
+        "to": "staircase_F0_east",
+        "weight": 1
+      },
+      {
+        "to": "emrgencyExit",
         "weight": 1
       }
     ],
-    "Reception": [
+    "staircase_F0_west_path": [
+      {
+        "to": "lift_F0_West",
+        "weight": 1
+      },
+      {
+        "to": "plantRoom SN005",
+        "weight": 1
+      },
+      {
+        "to": "foodPreparationArea",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F0_west",
+        "weight": 1
+      },
+      {
+        "to": "emrgencyExit",
+        "weight": 1
+      }
+    ],
+    "southEnthrance": [
+      {
+        "to": "Reception",
+        "weight": 1
+      },
+      {
+        "to": "Research & Enterprise",
+        "weight": 1
+      },
       {
         "to": "lift_F0_North",
         "weight": 2
@@ -60,7 +104,7 @@
       },
 
       {
-        "to": "SN001",
+        "to": "SN001(Bloomberg Finance Lab)",
         "weight": 1
       },
       {
@@ -83,19 +127,42 @@
   "senate_F1": {
     "lift_F1_West": [
       {
-        "to": "seating_F1_west",
+        "to": "passage_F1_west",
+        "weight": 1
+      }
+    ],
+
+    "passage_F1_west": [
+      {
+        "to": "lift_F1_West",
         "weight": 1
       },
       {
         "to": "staircase_F1_west",
         "weight": 1
       },
+       {
+        "to": "balcony_F1",
+        "weight": 1
+      },
       {
         "to": "toilets",
         "weight": 1
       },
+        {
+        "to": "SN101 (Morley room)",
+        "weight": 1
+      },
+       {
+        "to": "SN111",
+        "weight": 1
+      },
+       {
+        "to": "SN111.1",
+        "weight": 1
+      },
       {
-        "to": "SN110",
+        "to": "SN112",
         "weight": 1
       },
       {
@@ -126,48 +193,60 @@
         "to": "SN103",
         "weight": 2
       },
-      {
-        "to": "SN101 (Morley room)",
-        "weight": 1
-      },
-      {
-        "to": "balcony_F1",
-        "weight": 1
+        {
+        "to":"passage_F1_east",
+        "weight": 2
       }
+     
     ],
-    "lift_F1_North": [
+
+       "lift_F1_North": [
       {
         "to": "balcony_F1",
         "weight": 1
       }
     ],
 
-    "balcony_F1": [
-      {
-        "to": "seating_F1_west",
-        "weight": 1
-      },
-      {
-        "to": "seating_F1_east",
-        "weight": 1
-      },
-      {
-        "to": "staircase_F1_east",
-        "weight": 1
-      },
-
-      {
-        "to": "staircase_F1_east",
-        "weight": 1
-      },
+   "balcony_F1": [
       {
         "to": "lift_F1_North",
         "weight": 1
-      }
-    ],
-
-    "seating_F1_east": [
+      },
       {
+        "to": "passage_F1_east",
+        "weight": 1
+      },
+      {
+        "to": "passage_F1_west",
+        "weight": 1
+      },
+      {
+        "to": "staircase_F1_north",
+        "weight": 1
+      }
+
+    
+    ],
+    "passage_F1_east": [
+
+      {
+        "to": "balcony_F1",
+        "weight": 1
+      },
+         {
+        "to": "SN113",
+        "weight": 1
+      },
+      {
+        "to": "SN114",
+        "weight": 1
+      },
+      
+      {
+        "to": "staircase_F1_east",
+        "weight": 1
+      },
+       {
         "to": "toilets",
         "weight": 2
       },
@@ -204,54 +283,9 @@
         "to": "SN110",
         "weight": 2
       }
-    ],
-    "seating_F1_west": [
-      {
-        "to": "toilets",
-        "weight": 1
-      },
-      {
-        "to": "SN101 (Morley room)",
-        "weight": 1
-      },
-      {
-        "to": "SN102",
-        "weight": 1
-      },
-
-      {
-        "to": "SN107",
-        "weight": 1
-      },
-      {
-        "to": "SN108",
-        "weight": 1
-      },
-      {
-        "to": "SN109",
-        "weight": 1
-      },
-      {
-        "to": "SN110",
-        "weight": 1
-      },
-      {
-        "to": "SN103",
-        "weight": 2
-      },
-      {
-        "to": "SN104",
-        "weight": 2
-      },
-      {
-        "to": "SN105",
-        "weight": 2
-      },
-      {
-        "to": "SN106",
-        "weight": 2
-      }
+  
     ]
+
   },
 
   "senate_F2": {
@@ -682,8 +716,8 @@
       }
     ]
   },
-  "senate_F4":{
-       "lift_F4_West": [
+  "senate_F4": {
+    "lift_F4_West": [
       {
         "to": "seating_F4_west",
         "weight": 1
@@ -692,7 +726,7 @@
         "to": "staircase_F4_west",
         "weight": 1
       },
-          {
+      {
         "to": "SN402",
         "weight": 1
       }
@@ -704,7 +738,16 @@
       }
     ]
   },
-  "creative_hub_F1":{
-
-  }
+  "learning_hub_F1":{
+"NorthEntrance":[
+{
+  "to":"",
+  "weight" :1
+},
+{
+  
+}
+]
+  },
+  "creative_hub_F1": {}
 }
